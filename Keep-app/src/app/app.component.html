@@ -1,0 +1,42 @@
+<app-header></app-header>
+<div class="body-color">
+
+  <div class="notes-container">
+    <div class="add-note-card">
+      
+      <mat-card>
+        <mat-card-content>
+
+        <h2>Take a note</h2>
+        <form #noteForm="ngForm" (ngSubmit)="addNote()" fxLayout="column">
+          <mat-form-field>
+            <mat-label>Enter Title</mat-label>
+            <input matInput name="title" [(ngModel)]="newNote.title" required>
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Enter text</mat-label>
+            <textarea matInput name="text" [(ngModel)]="newNote.content" required></textarea>
+          </mat-form-field>
+          <button mat-raised-button type="submit" color="primary">Add Note</button>
+          <div *ngIf="errMessage" class="error-message">{{ errMessage }}</div>
+        </form>
+      </mat-card-content>
+    </mat-card>
+    
+  </div>
+</div>
+
+<mat-grid-list cols="6" rowHeight="200px">
+  <mat-grid-tile *ngFor="let note of notes">
+    <mat-card class="note-card">
+      <mat-card-header>
+        <mat-card-title><b>{{ note.title }}</b></mat-card-title>
+      </mat-card-header>
+      
+      <mat-card-content>{{ note.content }}</mat-card-content>
+      <button color="primary" (click)="deleteNote(note)" class="delete-button">Delete Note</button>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>
+
+</div>

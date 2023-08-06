@@ -1,0 +1,63 @@
+form {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(121, 118, 118);
+}
+mat-grid-list {
+  margin: 20px;
+}
+mat-card {
+  margin: 10px;
+  max-width: 400px;
+  cursor: pointer;
+  transition: box-shadow 0.3s;
+  color: honeydew;
+  background-color: rgb(121, 118, 118);
+}
+
+button[type="submit"] {
+  align-self: flex-end;
+}
+
+
+.notes-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  
+}
+.add-note-card,
+.note-cards {
+  width: 400px;
+  margin: 10px;
+  background-color: rgb(86, 83, 83);
+}
+
+.note-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+}
+
+/* app.component.css */
+.delete-button {
+  background-color: #f44336;
+  border: none;
+  color: white;
+  padding: 6px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+textarea {
+  resize: vertical;
+}
+.error-message {
+  color: red;
+  margin-top: 8px;
+}

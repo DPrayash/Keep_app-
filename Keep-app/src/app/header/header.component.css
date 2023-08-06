@@ -1,0 +1,13 @@
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; 
+  }
+  .right-section {
+    display: flex;
+    align-items: center;
+  }
+  .left-section {
+    display: flex;
+    align-items: center;
+  }
